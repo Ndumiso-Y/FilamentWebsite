@@ -19,10 +19,10 @@ import {
   FileText
 } from 'lucide-react';
 import Logo from './assets/Filament-logo.png';
-import HeroImg from './assets/images/operations-improvement-team-reviewing-space.png';
-import HeroImgMobile from './assets/images/operations-improvement-team-reviewing-space9by16.png';
-import ApproachImg from './assets/images/operational-excellence-in-action.png';
-import GraduateImg from './assets/images/graduate-exposure-learning-environment.png';
+import HeroImg from './assets/images/optimized/filament-hero-desktop.webp';
+import HeroImgMobile from './assets/images/optimized/filament-hero-mobile.webp';
+import ApproachImg from './assets/images/optimized/operational-excellence-in-action.webp';
+import GraduateImg from './assets/images/optimized/graduate-exposure-learning-environment.webp';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -132,19 +132,17 @@ export default function App() {
       <section className="relative min-h-[85svh] md:min-h-screen flex items-start md:items-center justify-start overflow-hidden bg-slate-950">
         {/* Full-bleed background image and overlays */}
         <div className="absolute inset-0 z-0">
-          {/* Mobile hero background image */}
-          <img 
-            src={HeroImgMobile} 
-            alt="Operations improvement team reviewing mining schedules and data charts in a spacious control room layout" 
-            className="md:hidden block absolute inset-0 w-full h-full object-cover object-top select-none"
-          />
-          {/* Desktop hero background image */}
-          <img 
-            src={HeroImg} 
-            alt="Operations improvement team reviewing mining schedules and data charts in a spacious control room layout" 
-            className="hidden md:block absolute right-0 top-0 h-full w-auto max-w-none object-cover select-none"
-            style={{ width: '120%', minWidth: '100%', objectPosition: 'right center' }}
-          />
+          <picture>
+            <source media="(min-width: 768px)" srcSet={HeroImg} />
+            <img 
+              src={HeroImgMobile} 
+              alt="Operations improvement team reviewing mining schedules and data charts in a spacious control room layout" 
+              className="absolute inset-0 w-full h-full object-cover object-top md:object-[right_center] md:right-0 md:top-0 md:w-[120%] md:min-w-[100%] md:max-w-none select-none"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+            />
+          </picture>
           {/* Softer corporate overlay across the full image */}
           <div className="absolute inset-0" style={{ backgroundColor: 'rgba(15, 30, 54, 0.18)' }}></div>
           {/* Top-down gradient for header navigation readability and contrast */}
@@ -161,7 +159,7 @@ export default function App() {
         {/* Content container */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-28 pb-16 md:py-32">
           {/* Left-aligned readable content block fitting in the image's negative space */}
-          <div className="max-w-[650px] text-left space-y-6 bg-slate-950/20 md:bg-transparent p-5 sm:p-6 md:p-0 rounded-lg backdrop-blur-[1px] md:backdrop-blur-none">
+          <div className="max-w-[650px] text-left space-y-6 bg-slate-950/45 md:bg-transparent p-5 sm:p-6 md:p-0 rounded-lg backdrop-blur-none md:backdrop-blur-none">
             
             {/* Orange Tag Badge */}
             <div className="inline-flex items-center space-x-2 bg-filament-orange/20 border border-filament-orange/30 rounded-full px-3 py-1 shadow-sm">
@@ -420,6 +418,8 @@ export default function App() {
                   src={ApproachImg} 
                   alt="Operational excellence in action with staff pointing out constraints on an operations board" 
                   className="w-full h-auto object-cover max-h-[380px]"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
               </div>
@@ -449,6 +449,8 @@ export default function App() {
                   src={GraduateImg} 
                   alt="Graduate gaining practical exposure in a mining-sector learning environment" 
                   className="w-full h-auto object-cover max-h-[420px]"
+                  loading="lazy"
+                  decoding="async"
                 />
                 {/* Floating caption */}
                 <div className="absolute bottom-4 left-4 bg-filament-blue-dark/95 backdrop-blur-sm px-3 py-2 rounded text-left border border-white/10">
@@ -760,7 +762,13 @@ export default function App() {
               <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Program Enquiries</span>
               {/* Highlight placeholder clearly but professionally */}
               <p className="text-xl font-bold text-white tracking-wide">
-                Email: <span className="text-filament-orange">enquiries@filament-transformation.com</span>
+                Email:{' '}
+                <a 
+                  href="mailto:info@filament-transformation.com" 
+                  className="text-filament-orange hover:text-filament-orange-dark transition-colors duration-200 underline underline-offset-4"
+                >
+                  info@filament-transformation.com
+                </a>
               </p>
               <span className="text-[10px] text-slate-400 italic block mt-1">(Official email connection to be finalized with domain)</span>
             </div>
@@ -780,6 +788,8 @@ export default function App() {
                   src={Logo} 
                   alt="Filament logo details" 
                   className="h-8 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <span className="text-white font-extrabold tracking-wider uppercase text-sm">Filament (Pty) Ltd</span>
               </div>
