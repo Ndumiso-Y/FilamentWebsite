@@ -136,10 +136,10 @@ export default function App() {
             alt="Operations improvement team reviewing mining schedules and data charts" 
             className="w-full h-full object-cover object-center select-none"
           />
-          {/* Desktop gradient overlay: deep navy on the left to preserve text readability, fading to semi-transparent on the right */}
-          <div className="absolute inset-0 bg-gradient-to-r from-filament-blue-dark via-filament-blue-dark/95 to-filament-blue-dark/30 lg:block hidden"></div>
-          {/* Mobile heavier overlay for contrast */}
-          <div className="absolute inset-0 bg-filament-blue-dark/90 lg:hidden block"></div>
+          {/* Softer charcoal/deep blue overlay across the full image to ensure overall visibility */}
+          <div className="absolute inset-0 bg-slate-950/40"></div>
+          {/* Lighter text-side gradient for subtle readability assistance */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/50 via-slate-950/20 to-transparent"></div>
           {/* Bottom subtle transition into the next section */}
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-50 via-slate-50/50 to-transparent pointer-events-none"></div>
         </div>
@@ -149,48 +149,47 @@ export default function App() {
 
         {/* Content container */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-24 md:py-32">
-          <div className="max-w-3xl lg:max-w-2xl text-left space-y-6">
+          {/* Translucent glass panel for text content readability */}
+          <div className="max-w-3xl lg:max-w-2xl text-left space-y-6 p-6 sm:p-8 md:p-10 rounded-xl border border-white/10 border-l-4 border-l-filament-orange bg-slate-950/70 backdrop-blur-md shadow-2xl relative overflow-hidden">
             
             {/* Orange Tag Badge */}
-            <div className="inline-flex items-center space-x-2 bg-filament-orange/20 border border-filament-orange/30 rounded-full px-3.5 py-1.5 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-filament-orange animate-pulse"></span>
-              <span className="text-white text-xs font-bold tracking-wider uppercase">Mining Sector Productivity</span>
+            <div className="inline-flex items-center space-x-2 bg-filament-orange/20 border border-filament-orange/30 rounded-full px-3 py-1 shadow-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-filament-orange animate-pulse"></span>
+              <span className="text-white text-[10px] sm:text-xs font-bold tracking-wider uppercase">Mining Sector Productivity</span>
             </div>
 
-            {/* Headline with left orange accent bar */}
-            <div className="relative pl-4 sm:pl-6 border-l-4 border-filament-orange">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] font-sans">
-                Productivity Transformation Through <span className="text-filament-orange">People, Process and Purpose</span>
-              </h1>
-            </div>
+            {/* Headline */}
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.15] font-sans">
+              Productivity Transformation Through <span className="text-filament-orange">People, Process and Purpose</span>
+            </h1>
 
             {/* Subheading */}
-            <p className="text-lg sm:text-xl text-slate-300 font-medium leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-300 font-medium leading-relaxed">
               Filament works at the intersection of operational excellence and human development — helping mining environments improve how work flows while creating practical exposure for emerging talent.
             </p>
 
             {/* Supporting Copy */}
-            <div className="space-y-4 text-slate-300 text-sm sm:text-base border-l border-white/20 pl-4 italic">
+            <div className="space-y-3 text-slate-400 text-xs sm:text-sm border-l border-white/20 pl-4 italic">
               <p>
                 Mining performance depends on more than systems and targets. It depends on people understanding the work, identifying constraints, and improving the way operations move.
               </p>
-              <p className="not-italic font-bold text-white">
+              <p className="not-italic font-semibold text-slate-200">
                 Filament brings a practical approach to productivity transformation in mining environments.
               </p>
             </div>
 
             {/* CTA Buttons */}
-            <div className="pt-4 flex flex-col sm:flex-row gap-4">
+            <div className="pt-2 flex flex-col sm:flex-row gap-4">
               <button 
                 onClick={() => scrollToSection('approach')}
-                className="bg-filament-orange hover:bg-filament-orange-dark text-white font-bold px-6 py-3.5 rounded shadow-lg hover:shadow-filament-orange/30 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center space-x-2 focus-visible:ring-2 focus-visible:ring-white"
+                className="bg-filament-orange hover:bg-filament-orange-dark text-white font-bold px-5 py-3 rounded shadow-lg hover:shadow-filament-orange/30 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center space-x-2 focus-visible:ring-2 focus-visible:ring-white text-sm sm:text-base"
               >
                 <span>Explore the Model</span>
                 <ChevronRight className="w-4 h-4" />
               </button>
               <button 
                 onClick={() => scrollToSection('evidence')}
-                className="bg-white/10 hover:bg-white/15 text-white border border-white/30 font-semibold px-6 py-3.5 rounded hover:border-white/55 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center space-x-2 focus-visible:ring-2 focus-visible:ring-white"
+                className="bg-white/10 hover:bg-white/15 text-white border border-white/30 font-semibold px-5 py-3 rounded hover:border-white/55 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center space-x-2 focus-visible:ring-2 focus-visible:ring-white text-sm sm:text-base"
               >
                 <span>View the Proof Point</span>
               </button>
