@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-filament-charcoal antialiased selection:bg-filament-orange selection:text-white;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Custom keyboard focus indicators for premium accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-filament-orange ring-offset-2 ring-offset-white;
+  }
+}
+
+@layer utilities {
+  /* Subtle glassmorphism */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+  }
+
+  .glass-nav {
+    background: rgba(15, 30, 54, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Clean dots pattern background */
+  .bg-dots {
+    background-image: radial-gradient(rgba(226, 232, 240, 0.8) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .bg-dots-dark {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full border-2 border-slate-100 hover:bg-slate-400 transition-colors;
+}
