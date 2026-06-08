@@ -76,7 +76,7 @@ export default function App() {
                 <img 
                   src={Logo} 
                   alt="Filament Logo" 
-                  className="h-10 sm:h-12 w-auto object-contain bg-white p-1 rounded-sm shadow-sm"
+                  className="h-10 sm:h-12 w-auto object-contain"
                 />
                 <div className="hidden md:flex flex-col border-l border-white/20 pl-4">
                   <span className="text-white font-bold tracking-wider text-sm font-sans uppercase">Filament</span>
@@ -771,7 +771,7 @@ export default function App() {
                 <img 
                   src={Logo} 
                   alt="Filament logo details" 
-                  className="h-8 w-auto bg-white p-1 rounded-sm"
+                  className="h-8 w-auto object-contain"
                 />
                 <span className="text-white font-extrabold tracking-wider uppercase text-sm">Filament (Pty) Ltd</span>
               </div>
