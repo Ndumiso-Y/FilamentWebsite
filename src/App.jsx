@@ -134,7 +134,8 @@ export default function App() {
           <img 
             src={HeroImg} 
             alt="Operations improvement team reviewing mining schedules and data charts in a spacious control room layout" 
-            className="w-full h-full object-cover object-right select-none"
+            className="absolute right-0 top-0 h-full w-auto max-w-none object-cover select-none"
+            style={{ width: '120%', minWidth: '100%', objectPosition: 'right center' }}
           />
           {/* Softer corporate overlay across the full image */}
           <div className="absolute inset-0" style={{ backgroundColor: 'rgba(15, 30, 54, 0.18)' }}></div>
