@@ -64,8 +64,8 @@ export default function App() {
       <header 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled 
-            ? 'bg-filament-blue/95 backdrop-blur-md shadow-lg border-b border-white/10 py-3' 
-            : 'bg-transparent py-5 border-b border-white/10'
+            ? 'bg-filament-blue/95 backdrop-blur-md shadow-lg border-b border-white/10 py-1.5' 
+            : 'bg-transparent py-3 border-b border-white/10'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,7 +76,7 @@ export default function App() {
                 <img 
                   src={Logo} 
                   alt="Filament Logo" 
-                  className="h-10 sm:h-12 w-auto object-contain"
+                  className="h-12 sm:h-16 w-auto object-contain"
                 />
                 <div className="hidden md:flex flex-col border-l border-white/20 pl-4">
                   <span className="text-white font-bold tracking-wider text-sm font-sans uppercase">Filament</span>
