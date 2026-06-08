@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import Logo from './assets/Filament-logo.png';
 import HeroImg from './assets/images/operations-improvement-team-reviewing-space.png';
+import HeroImgMobile from './assets/images/operations-improvement-team-reviewing-space9by16.png';
 import ApproachImg from './assets/images/operational-excellence-in-action.png';
 import GraduateImg from './assets/images/graduate-exposure-learning-environment.png';
 
@@ -128,13 +129,20 @@ export default function App() {
       </header>
 
       {/* --- 1. HERO SECTION --- */}
-      <section className="relative min-h-[90vh] lg:min-h-screen flex items-center justify-start overflow-hidden bg-slate-950">
+      <section className="relative min-h-[85svh] md:min-h-screen flex items-start md:items-center justify-start overflow-hidden bg-slate-950">
         {/* Full-bleed background image and overlays */}
         <div className="absolute inset-0 z-0">
+          {/* Mobile hero background image */}
+          <img 
+            src={HeroImgMobile} 
+            alt="Operations improvement team reviewing mining schedules and data charts in a spacious control room layout" 
+            className="md:hidden block absolute inset-0 w-full h-full object-cover object-top select-none"
+          />
+          {/* Desktop hero background image */}
           <img 
             src={HeroImg} 
             alt="Operations improvement team reviewing mining schedules and data charts in a spacious control room layout" 
-            className="absolute right-0 top-0 h-full w-auto max-w-none object-cover select-none"
+            className="hidden md:block absolute right-0 top-0 h-full w-auto max-w-none object-cover select-none"
             style={{ width: '120%', minWidth: '100%', objectPosition: 'right center' }}
           />
           {/* Softer corporate overlay across the full image */}
@@ -151,9 +159,9 @@ export default function App() {
         <div className="absolute left-0 top-1/3 w-72 h-72 bg-filament-orange/10 rounded-full filter blur-3xl pointer-events-none z-0"></div>
 
         {/* Content container */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-24 md:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-28 pb-16 md:py-32">
           {/* Left-aligned readable content block fitting in the image's negative space */}
-          <div className="max-w-[650px] text-left space-y-6 bg-slate-950/30 md:bg-transparent p-6 md:p-0 rounded-lg backdrop-blur-[2px] md:backdrop-blur-none">
+          <div className="max-w-[650px] text-left space-y-6 bg-slate-950/20 md:bg-transparent p-5 sm:p-6 md:p-0 rounded-lg backdrop-blur-[1px] md:backdrop-blur-none">
             
             {/* Orange Tag Badge */}
             <div className="inline-flex items-center space-x-2 bg-filament-orange/20 border border-filament-orange/30 rounded-full px-3 py-1 shadow-sm">
