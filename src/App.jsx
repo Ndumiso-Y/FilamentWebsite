@@ -797,9 +797,22 @@ export default function App() {
                 <button onClick={() => scrollToSection('graduate-dev')} className="hover:text-white transition-colors">Graduate Dev</button>
                 <button onClick={() => scrollToSection('evidence')} className="hover:text-white transition-colors">Evidence</button>
               </div>
-              <p className="text-xs text-slate-600">
-                &copy; {currentYear} Filament (Pty) Ltd. All rights reserved. Registered static landing page.
-              </p>
+              <div className="space-y-1">
+                <p className="text-xs text-slate-600">
+                  &copy; 2026 Filament (Pty) Ltd. All rights reserved.
+                </p>
+                <p className="text-[11px] text-slate-600">
+                  Website designed, developed &amp; hosted by{' '}
+                  <a 
+                    href="https://www.embarkdigitals.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-slate-500 hover:text-filament-orange transition-colors duration-200 font-medium underline underline-offset-2"
+                  >
+                    Embark Digitals
+                  </a>.
+                </p>
+              </div>
             </div>
 
           </div>
