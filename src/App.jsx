@@ -19,7 +19,7 @@ import {
   FileText
 } from 'lucide-react';
 import Logo from './assets/Filament-logo.png';
-import HeroImg from './assets/images/operations-improvement-team-reviewing.png';
+import HeroImg from './assets/images/operations-improvement-team-reviewing-space.png';
 import ApproachImg from './assets/images/operational-excellence-in-action.png';
 import GraduateImg from './assets/images/graduate-exposure-learning-environment.png';
 
@@ -133,24 +133,24 @@ export default function App() {
         <div className="absolute inset-0 z-0">
           <img 
             src={HeroImg} 
-            alt="Operations improvement team reviewing mining schedules and data charts" 
+            alt="Operations improvement team reviewing mining schedules and data charts in a spacious control room layout" 
             className="w-full h-full object-cover object-center select-none"
           />
-          {/* Softer charcoal/deep blue overlay across the full image to ensure overall visibility */}
-          <div className="absolute inset-0 bg-slate-950/40"></div>
-          {/* Lighter text-side gradient for subtle readability assistance */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/50 via-slate-950/20 to-transparent"></div>
+          {/* Softer corporate overlay across the full image */}
+          <div className="absolute inset-0" style={{ backgroundColor: 'rgba(15, 30, 54, 0.18)' }}></div>
+          {/* Lighter text-side gradient max opacity stays under 0.35 */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0F1E36]/35 via-[#0F1E36]/10 to-transparent"></div>
           {/* Bottom subtle transition into the next section */}
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-50 via-slate-50/50 to-transparent pointer-events-none"></div>
         </div>
 
         {/* Subtle orange accent glow/blur behind the text for branding connection */}
-        <div className="absolute left-0 top-1/3 w-72 h-72 bg-filament-orange/15 rounded-full filter blur-3xl pointer-events-none z-0"></div>
+        <div className="absolute left-0 top-1/3 w-72 h-72 bg-filament-orange/10 rounded-full filter blur-3xl pointer-events-none z-0"></div>
 
         {/* Content container */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-24 md:py-32">
-          {/* Translucent glass panel for text content readability */}
-          <div className="max-w-3xl lg:max-w-2xl text-left space-y-6 p-6 sm:p-8 md:p-10 rounded-xl border border-white/10 border-l-4 border-l-filament-orange bg-slate-950/70 backdrop-blur-md shadow-2xl relative overflow-hidden">
+          {/* Left-aligned readable content block fitting in the image's negative space */}
+          <div className="max-w-[650px] text-left space-y-6 bg-slate-950/30 md:bg-transparent p-6 md:p-0 rounded-lg backdrop-blur-[2px] md:backdrop-blur-none">
             
             {/* Orange Tag Badge */}
             <div className="inline-flex items-center space-x-2 bg-filament-orange/20 border border-filament-orange/30 rounded-full px-3 py-1 shadow-sm">
@@ -158,41 +158,47 @@ export default function App() {
               <span className="text-white text-[10px] sm:text-xs font-bold tracking-wider uppercase">Mining Sector Productivity</span>
             </div>
 
-            {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.15] font-sans">
-              Productivity Transformation Through <span className="text-filament-orange">People, Process and Purpose</span>
-            </h1>
+            {/* Headline with left orange accent bar */}
+            <div className="relative pl-4 sm:pl-6 border-l-4 border-filament-orange">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] font-sans drop-shadow-md">
+                Productivity Transformation Through <span className="text-filament-orange">People, Process and Purpose</span>
+              </h1>
+            </div>
 
             {/* Subheading */}
-            <p className="text-base sm:text-lg text-slate-300 font-medium leading-relaxed">
+            <p className="text-lg sm:text-xl text-slate-100 font-medium leading-relaxed drop-shadow-sm">
               Filament works at the intersection of operational excellence and human development — helping mining environments improve how work flows while creating practical exposure for emerging talent.
             </p>
 
             {/* Supporting Copy */}
-            <div className="space-y-3 text-slate-400 text-xs sm:text-sm border-l border-white/20 pl-4 italic">
+            <div className="space-y-3 text-slate-200 text-sm sm:text-base border-l border-white/20 pl-4 italic drop-shadow-sm">
               <p>
                 Mining performance depends on more than systems and targets. It depends on people understanding the work, identifying constraints, and improving the way operations move.
               </p>
-              <p className="not-italic font-semibold text-slate-200">
+              <p className="not-italic font-bold text-white">
                 Filament brings a practical approach to productivity transformation in mining environments.
               </p>
             </div>
 
-            {/* CTA Buttons */}
-            <div className="pt-2 flex flex-col sm:flex-row gap-4">
-              <button 
-                onClick={() => scrollToSection('approach')}
-                className="bg-filament-orange hover:bg-filament-orange-dark text-white font-bold px-5 py-3 rounded shadow-lg hover:shadow-filament-orange/30 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center space-x-2 focus-visible:ring-2 focus-visible:ring-white text-sm sm:text-base"
-              >
-                <span>Explore the Model</span>
-                <ChevronRight className="w-4 h-4" />
-              </button>
-              <button 
-                onClick={() => scrollToSection('evidence')}
-                className="bg-white/10 hover:bg-white/15 text-white border border-white/30 font-semibold px-5 py-3 rounded hover:border-white/55 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center space-x-2 focus-visible:ring-2 focus-visible:ring-white text-sm sm:text-base"
-              >
-                <span>View the Proof Point</span>
-              </button>
+            {/* Subtle orange accent line near CTA */}
+            <div className="pt-2">
+              <div className="w-16 h-0.5 bg-filament-orange mb-4 rounded shadow-sm"></div>
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button 
+                  onClick={() => scrollToSection('approach')}
+                  className="bg-filament-orange hover:bg-filament-orange-dark text-white font-bold px-6 py-3.5 rounded shadow-lg hover:shadow-filament-orange/30 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center space-x-2 focus-visible:ring-2 focus-visible:ring-white text-sm sm:text-base"
+                >
+                  <span>Explore the Model</span>
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+                <button 
+                  onClick={() => scrollToSection('evidence')}
+                  className="bg-white/15 hover:bg-white/25 text-white border border-white/35 font-semibold px-6 py-3.5 rounded hover:border-white/60 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center space-x-2 focus-visible:ring-2 focus-visible:ring-white text-sm sm:text-base"
+                >
+                  <span>View the Proof Point</span>
+                </button>
+              </div>
             </div>
 
           </div>
