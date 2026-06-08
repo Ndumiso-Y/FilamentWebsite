@@ -134,10 +134,12 @@ export default function App() {
           <img 
             src={HeroImg} 
             alt="Operations improvement team reviewing mining schedules and data charts in a spacious control room layout" 
-            className="w-full h-full object-cover object-center select-none"
+            className="w-full h-full object-cover object-right select-none"
           />
           {/* Softer corporate overlay across the full image */}
           <div className="absolute inset-0" style={{ backgroundColor: 'rgba(15, 30, 54, 0.18)' }}></div>
+          {/* Top-down gradient for header navigation readability and contrast */}
+          <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-slate-950/55 via-slate-950/15 to-transparent pointer-events-none"></div>
           {/* Lighter text-side gradient max opacity stays under 0.35 */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#0F1E36]/35 via-[#0F1E36]/10 to-transparent"></div>
           {/* Bottom subtle transition into the next section */}
