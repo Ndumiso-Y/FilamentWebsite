@@ -137,7 +137,7 @@ export default function App() {
             <img 
               src={HeroImgMobile} 
               alt="Operations improvement team reviewing mining schedules and data charts in a spacious control room layout" 
-              className="absolute inset-0 w-full h-full object-cover object-top md:object-[right_center] md:right-0 md:top-0 md:w-[120%] md:min-w-[100%] md:max-w-none select-none"
+              className="absolute inset-0 w-full h-full object-cover object-top md:object-[right_center] md:right-0 md:top-0 md:left-auto md:bottom-auto md:w-[120%] md:min-w-[100%] md:max-w-none select-none"
               loading="eager"
               fetchPriority="high"
               decoding="async"
@@ -808,10 +808,10 @@ export default function App() {
                 <button onClick={() => scrollToSection('evidence')} className="hover:text-white transition-colors">Evidence</button>
               </div>
               <div className="space-y-1">
-                <p className="text-xs text-slate-600">
+                <p className="text-xs text-slate-500">
                   &copy; 2026 Filament (Pty) Ltd. All rights reserved.
                 </p>
-                <p className="text-[11px] text-slate-600">
+                <p className="text-[11px] text-slate-500">
                   Website designed, developed &amp; hosted by{' '}
                   <a 
                     href="https://www.embarkdigitals.com" 
