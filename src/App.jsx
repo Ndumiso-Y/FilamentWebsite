@@ -65,7 +65,7 @@ export default function App() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled 
             ? 'bg-filament-blue/95 backdrop-blur-md shadow-lg border-b border-white/10 py-3' 
-            : 'bg-filament-blue py-5 border-b border-white/5'
+            : 'bg-transparent py-5 border-b border-white/10'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -128,72 +128,74 @@ export default function App() {
       </header>
 
       {/* --- 1. HERO SECTION --- */}
-      <section className="relative bg-filament-blue pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden bg-dots-dark">
-        {/* Decorative elements */}
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-filament-orange/5 rounded-full filter blur-3xl pointer-events-none"></div>
-        <div className="absolute bottom-1/8 left-10 w-80 h-80 bg-filament-blue-light/25 rounded-full filter blur-3xl pointer-events-none"></div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-            {/* Hero Left Content */}
-            <div className="lg:col-span-7 space-y-6 text-left">
-              <div className="inline-flex items-center space-x-2 bg-white/10 border border-white/20 rounded-full px-3.5 py-1.5 shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-filament-orange animate-pulse"></span>
-                <span className="text-white text-xs font-semibold tracking-wider uppercase">Mining Sector Productivity</span>
-              </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-none font-sans">
-                Productivity Transformation Through <span className="text-filament-orange">People, Process and Purpose</span>
-              </h1>
-              <p className="text-lg sm:text-xl text-slate-300 font-medium leading-relaxed max-w-2xl">
-                Filament works at the intersection of operational excellence and human development — helping mining environments improve how work flows while creating practical exposure for emerging talent.
-              </p>
-              <div className="space-y-4 text-slate-400 text-sm sm:text-base max-w-xl border-l-2 border-filament-orange/40 pl-4 italic">
-                <p>
-                  Mining performance depends on more than systems and targets. It depends on people understanding the work, identifying constraints, and improving the way operations move.
-                </p>
-                <p className="not-italic text-slate-300 font-semibold">
-                  Filament brings a practical approach to productivity transformation in mining environments.
-                </p>
-              </div>
-              <div className="pt-4 flex flex-col sm:flex-row gap-4">
-                <button 
-                  onClick={() => scrollToSection('approach')}
-                  className="bg-filament-orange hover:bg-filament-orange-dark text-white font-bold px-6 py-3.5 rounded shadow-lg hover:shadow-filament-orange/30 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center space-x-2 focus-visible:ring-2 focus-visible:ring-white"
-                >
-                  <span>Explore the Model</span>
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-                <button 
-                  onClick={() => scrollToSection('evidence')}
-                  className="bg-white/10 hover:bg-white/15 text-white border border-white/30 font-semibold px-6 py-3.5 rounded hover:border-white/50 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center space-x-2 focus-visible:ring-2 focus-visible:ring-white"
-                >
-                  <span>View the Proof Point</span>
-                </button>
-              </div>
+      <section className="relative min-h-[90vh] lg:min-h-screen flex items-center justify-start overflow-hidden bg-slate-950">
+        {/* Full-bleed background image and overlays */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={HeroImg} 
+            alt="Operations improvement team reviewing mining schedules and data charts" 
+            className="w-full h-full object-cover object-center select-none"
+          />
+          {/* Desktop gradient overlay: deep navy on the left to preserve text readability, fading to semi-transparent on the right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-filament-blue-dark via-filament-blue-dark/95 to-filament-blue-dark/30 lg:block hidden"></div>
+          {/* Mobile heavier overlay for contrast */}
+          <div className="absolute inset-0 bg-filament-blue-dark/90 lg:hidden block"></div>
+          {/* Bottom subtle transition into the next section */}
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-50 via-slate-50/50 to-transparent pointer-events-none"></div>
+        </div>
+
+        {/* Subtle orange accent glow/blur behind the text for branding connection */}
+        <div className="absolute left-0 top-1/3 w-72 h-72 bg-filament-orange/15 rounded-full filter blur-3xl pointer-events-none z-0"></div>
+
+        {/* Content container */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-24 md:py-32">
+          <div className="max-w-3xl lg:max-w-2xl text-left space-y-6">
+            
+            {/* Orange Tag Badge */}
+            <div className="inline-flex items-center space-x-2 bg-filament-orange/20 border border-filament-orange/30 rounded-full px-3.5 py-1.5 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-filament-orange animate-pulse"></span>
+              <span className="text-white text-xs font-bold tracking-wider uppercase">Mining Sector Productivity</span>
             </div>
 
-            {/* Hero Right Image */}
-            <div className="lg:col-span-5 relative mt-8 lg:mt-0">
-              <div className="relative mx-auto max-w-md lg:max-w-none">
-                {/* Decorative border frame */}
-                <div className="absolute -inset-1.5 bg-gradient-to-r from-filament-orange to-filament-blue-light rounded-lg blur opacity-30"></div>
-                <div className="relative bg-filament-blue-dark rounded-lg overflow-hidden border border-white/10 shadow-2xl">
-                  <img 
-                    src={HeroImg} 
-                    alt="Operations improvement team reviewing mining schedules and data charts" 
-                    className="w-full h-auto object-cover object-center max-h-[450px]"
-                  />
-                  {/* Subtle technical overlay overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-filament-blue/90 via-transparent to-transparent"></div>
-                  
-                  {/* Small floating info badge */}
-                  <div className="absolute bottom-4 left-4 right-4 bg-filament-blue-dark/95 backdrop-blur-sm border border-white/10 rounded p-3 text-left">
-                    <p className="text-xs font-semibold text-filament-orange uppercase tracking-wide">Featured Operation</p>
-                    <p className="text-xs text-white mt-0.5">Continuous analysis & real-time observations in the mining environment.</p>
-                  </div>
-                </div>
-              </div>
+            {/* Headline with left orange accent bar */}
+            <div className="relative pl-4 sm:pl-6 border-l-4 border-filament-orange">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] font-sans">
+                Productivity Transformation Through <span className="text-filament-orange">People, Process and Purpose</span>
+              </h1>
             </div>
+
+            {/* Subheading */}
+            <p className="text-lg sm:text-xl text-slate-300 font-medium leading-relaxed">
+              Filament works at the intersection of operational excellence and human development — helping mining environments improve how work flows while creating practical exposure for emerging talent.
+            </p>
+
+            {/* Supporting Copy */}
+            <div className="space-y-4 text-slate-300 text-sm sm:text-base border-l border-white/20 pl-4 italic">
+              <p>
+                Mining performance depends on more than systems and targets. It depends on people understanding the work, identifying constraints, and improving the way operations move.
+              </p>
+              <p className="not-italic font-bold text-white">
+                Filament brings a practical approach to productivity transformation in mining environments.
+              </p>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="pt-4 flex flex-col sm:flex-row gap-4">
+              <button 
+                onClick={() => scrollToSection('approach')}
+                className="bg-filament-orange hover:bg-filament-orange-dark text-white font-bold px-6 py-3.5 rounded shadow-lg hover:shadow-filament-orange/30 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center space-x-2 focus-visible:ring-2 focus-visible:ring-white"
+              >
+                <span>Explore the Model</span>
+                <ChevronRight className="w-4 h-4" />
+              </button>
+              <button 
+                onClick={() => scrollToSection('evidence')}
+                className="bg-white/10 hover:bg-white/15 text-white border border-white/30 font-semibold px-6 py-3.5 rounded hover:border-white/55 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center space-x-2 focus-visible:ring-2 focus-visible:ring-white"
+              >
+                <span>View the Proof Point</span>
+              </button>
+            </div>
+
           </div>
         </div>
       </section>
