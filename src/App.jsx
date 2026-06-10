@@ -1,30 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { 
   Search, 
   BarChart3, 
   Workflow, 
   Users, 
   GraduationCap, 
-  TrendingUp, 
   Award, 
   Building2, 
-  BookOpen, 
   Mail, 
   ArrowRight, 
   Menu, 
   X, 
   ChevronRight,
   ShieldCheck,
-  Compass,
-  FileText
+  Compass
 } from 'lucide-react';
 import Logo from './assets/Filament-logo.png';
 import HeroImg from './assets/images/optimized/filament-hero-desktop.webp';
 import HeroImgMobile from './assets/images/optimized/filament-hero-mobile.webp';
 import ApproachImg from './assets/images/optimized/operational-excellence-in-action.webp';
 import GraduateImg from './assets/images/optimized/graduate-exposure-learning-environment.webp';
+import DigitalBusinessCard from './components/DigitalBusinessCard';
 
 export default function App() {
+  const pathParts = window.location.pathname.split('/').filter(Boolean);
+  const isCardRoute = pathParts[0] === 'cards';
+
+  if (isCardRoute) {
+    return <DigitalBusinessCard slug={decodeURIComponent(pathParts[1] || '')} />;
+  }
+
+  return <HomePage />;
+}
+
+function HomePage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -56,8 +65,6 @@ export default function App() {
       });
     }
   };
-
-  const currentYear = new Date().getFullYear();
 
   return (
     <div className="min-h-screen bg-slate-50 text-filament-charcoal flex flex-col font-sans antialiased selection:bg-filament-orange selection:text-white">
