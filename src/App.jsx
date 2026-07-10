@@ -5,6 +5,7 @@ import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import WhatWeDoPage from './pages/WhatWeDoPage';
+import OurApproachPage from './pages/OurApproachPage';
 
 // Placeholders for routes to be built
 const Placeholder = ({ title }) => (
@@ -24,7 +25,7 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/what-we-do" element={<WhatWeDoPage />} />
-            <Route path="/our-approach" element={<Placeholder title="Our Approach" />} />
+            <Route path="/our-approach" element={<OurApproachPage />} />
             <Route path="/people" element={<Placeholder title="People & Leadership" />} />
             <Route path="/insights" element={<Placeholder title="Insights & Evidence" />} />
             <Route path="/contact" element={<Placeholder title="Contact Us" />} />
