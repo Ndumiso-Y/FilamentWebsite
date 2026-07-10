@@ -7,6 +7,8 @@ import AboutPage from './pages/AboutPage';
 import WhatWeDoPage from './pages/WhatWeDoPage';
 import OurApproachPage from './pages/OurApproachPage';
 import PeoplePage from './pages/PeoplePage';
+import InsightsPage from './pages/InsightsPage';
+import ContactPage from './pages/ContactPage';
 
 // Placeholders for routes to be built
 const Placeholder = ({ title }) => (
@@ -28,8 +30,8 @@ export default function App() {
             <Route path="/what-we-do" element={<WhatWeDoPage />} />
             <Route path="/our-approach" element={<OurApproachPage />} />
             <Route path="/people" element={<PeoplePage />} />
-            <Route path="/insights" element={<Placeholder title="Insights & Evidence" />} />
-            <Route path="/contact" element={<Placeholder title="Contact Us" />} />
+            <Route path="/insights" element={<InsightsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Route>
           
           {/* Keep digital business cards route standalone if needed, or route under main layout */}
