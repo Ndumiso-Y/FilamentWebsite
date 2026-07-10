@@ -8,7 +8,6 @@ import vincentImg from '../assets/images/optimized/vincent-seboni.webp';
 import mxolisiImg from '../assets/images/optimized/mxolisi-kobus.webp';
 import sadhaImg from '../assets/images/optimized/sadha-govender.webp';
 import marcImg from '../assets/images/optimized/marc-corcoran.webp';
-import zweliImg from '../assets/images/optimized/zweli-ndese.webp';
 import lefuImg from '../assets/images/optimized/lefu-mohloki.webp';
 import rudyImg from '../assets/images/optimized/dr-rudy-phillis.webp';
 
@@ -18,7 +17,6 @@ const imageMap = {
   'mxolisi-kobus.jpg': mxolisiImg,
   'sadha-govender.jpg': sadhaImg,
   'marc-corcoran.jpg': marcImg,
-  'zweli.png': zweliImg,
   'lefu.png': lefuImg,
   'dr-rudy.jpg': rudyImg
 };
