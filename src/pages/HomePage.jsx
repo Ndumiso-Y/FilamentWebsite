@@ -4,7 +4,8 @@ import { ChevronRight } from 'lucide-react';
 import { seoData } from '../data/seoData';
 import { siteConfig } from '../data/siteConfig';
 
-import HeroImg from '../assets/images/optimized/filament-underground-productivity-context.webp';
+import HeroDesktopImg from '../assets/images/optimized/operations-improvement-team-reviewing-space.webp';
+import HeroMobileImg from '../assets/images/optimized/filament-hero-mobile.webp';
 import SprintImg from '../assets/images/optimized/filament-mining-productivity-sprint.webp';
 
 export default function HomePage() {
@@ -19,8 +20,9 @@ export default function HomePage() {
       <section className="relative min-h-[85svh] md:min-h-screen flex items-start md:items-center justify-start overflow-hidden bg-slate-950">
         <div className="absolute inset-0 z-0">
           <picture>
+            <source media="(min-width: 768px)" srcSet={HeroDesktopImg} />
             <img 
-              src={HeroImg} 
+              src={HeroMobileImg} 
               alt="Underground productivity context and mining operations" 
               className="absolute inset-0 w-full h-full object-cover object-center md:object-[right_center] md:right-0 md:top-0 md:left-auto md:bottom-auto md:w-[120%] md:min-w-[100%] md:max-w-none select-none opacity-80"
               loading="eager"

@@ -78,3 +78,12 @@ This is the internal implementation ledger for the Filament Website Maturation p
   - `src/pages/PeoplePage.jsx`
   - `src/App.jsx` (Added routing)
 - **Commit:** `7e1504a`
+
+## Phase 11 & 12: Insights & Pathways (Contact)
+- **What was implemented:** Restored the lost content into two new pages. `InsightsPage.jsx` houses the operational challenges, the Wits/Two Rivers 6/6 graduate proof of concept, the mutual value model, and Dr Rudy Phillis's academic foundation. `ContactPage.jsx` was built around the Dual Pathway (Filament vs Chasm Bridge Charity) and provides direct programmatic `mailto` enquiry logic, avoiding heavy database dependencies. Also ran `optimize_local.cjs` to convert remaining requested PNGs into WebP.
+- **Why:** To satisfy Phase 11 (Insights) and Phase 12 (Social Integration/Form) using the newly verified content without exaggerating claims.
+- **Files modified/created:** 
+  - `src/pages/InsightsPage.jsx`
+  - `src/pages/ContactPage.jsx`
+  - `src/App.jsx` (Added routing)
+  - `optimize_local.cjs`

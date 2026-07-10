@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { seoData } from '../data/seoData';
-import { executiveDirectors, enterprisePartners } from '../data/team';
+import { leadership, partnerBench } from '../data/team';
 
 // We import the WebP images manually so Vite bundles them correctly
 import moniqueImg from '../assets/images/optimized/monique-phillis-executive.webp';
@@ -51,7 +51,7 @@ export default function PeoplePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto">
-            {executiveDirectors.map((person, idx) => (
+            {leadership.map((person, idx) => (
               <div key={idx} className="flex flex-col text-center">
                 <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-slate-100 shadow-md bg-slate-50">
                   <img 
@@ -66,7 +66,7 @@ export default function PeoplePage() {
                 
                 <div className="bg-slate-50 rounded-xl p-6 text-left border border-slate-100 shadow-sm">
                   <ul className="space-y-3">
-                    {person.highlights.slice(0, 4).map((highlight, hIdx) => (
+                    {person.details.slice(0, 4).map((highlight, hIdx) => (
                       <li key={hIdx} className="flex items-start text-sm text-slate-700">
                         <span className="w-1.5 h-1.5 rounded-full bg-filament-orange mt-1.5 mr-3 flex-shrink-0"></span>
                         {highlight}
@@ -92,7 +92,7 @@ export default function PeoplePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {enterprisePartners.map((person, idx) => (
+            {partnerBench.map((person, idx) => (
               <div key={idx} className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
                 <div className="p-8 text-center border-b border-slate-100 relative">
                   <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-slate-50 bg-slate-100">
@@ -115,7 +115,7 @@ export default function PeoplePage() {
                   
                   <div className="pt-4 border-t border-slate-100">
                     <ul className="space-y-2">
-                      {person.highlights.slice(0, 3).map((highlight, hIdx) => (
+                      {person.details.slice(0, 3).map((highlight, hIdx) => (
                         <li key={hIdx} className="flex items-start text-xs text-slate-500">
                           <span className="w-1 h-1 rounded-full bg-filament-blue mt-1.5 mr-2 flex-shrink-0"></span>
                           <span className="leading-tight">{highlight}</span>

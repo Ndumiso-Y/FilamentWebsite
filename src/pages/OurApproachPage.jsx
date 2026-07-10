@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { RefreshCw, LayoutTemplate, Layers, AlertCircle, TrendingUp, Anchor, CheckCircle } from 'lucide-react';
 import { seoData } from '../data/seoData';
-import { methodologies } from '../data/methodologies';
+import { tocSteps } from '../data/methodologies';
 
 export default function OurApproachPage() {
   return (
@@ -78,15 +78,15 @@ export default function OurApproachPage() {
               </p>
               
               <div className="space-y-4">
-                {methodologies.find(m => m.id === 'toc')?.process.map((step, idx) => (
+                {tocSteps.map((stepItem, idx) => (
                   <div key={idx} className="flex items-start bg-slate-50 p-4 rounded-lg border border-slate-100">
                     <div className="flex-shrink-0 mt-1">
                       <div className="w-8 h-8 rounded-full bg-filament-orange text-white flex items-center justify-center font-bold text-sm">
-                        {idx + 1}
+                        {stepItem.step}
                       </div>
                     </div>
                     <div className="ml-4">
-                      <h4 className="text-base font-bold text-filament-blue">{step}</h4>
+                      <h4 className="text-base font-bold text-filament-blue">{stepItem.title}: {stepItem.description}</h4>
                     </div>
                   </div>
                 ))}
