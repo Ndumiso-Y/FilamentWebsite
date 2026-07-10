@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
+import WhatWeDoPage from './pages/WhatWeDoPage';
 
 // Placeholders for routes to be built
 const Placeholder = ({ title }) => (
@@ -22,7 +23,7 @@ export default function App() {
           <Route element={<MainLayout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/what-we-do" element={<Placeholder title="What We Do" />} />
+            <Route path="/what-we-do" element={<WhatWeDoPage />} />
             <Route path="/our-approach" element={<Placeholder title="Our Approach" />} />
             <Route path="/people" element={<Placeholder title="People & Leadership" />} />
             <Route path="/insights" element={<Placeholder title="Insights & Evidence" />} />
