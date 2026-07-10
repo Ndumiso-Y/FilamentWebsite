@@ -6,7 +6,6 @@ import { siteConfig } from '../data/siteConfig';
 
 import HeroDesktopImg from '../assets/images/optimized/operations-improvement-team-reviewing-space.webp';
 import HeroMobileImg from '../assets/images/optimized/filament-hero-mobile.webp';
-import SprintImg from '../assets/images/optimized/filament-mining-productivity-sprint.webp';
 
 export default function HomePage() {
   return (
@@ -139,23 +138,13 @@ export default function HomePage() {
       <section className="py-24 bg-filament-blue-dark text-white relative">
         <div className="absolute inset-0 bg-dots-dark opacity-30"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="text-left">
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-                Our Approach: The 4Ps
-              </h2>
-              <p className="text-lg text-slate-300 max-w-xl">
-                Productivity transformation that delivers early proof — and sustains the gain. We integrate Theory of Constraints (TOC) and Lean Transformation into a governed, auditable operating model.
-              </p>
-            </div>
-            <div className="rounded-xl overflow-hidden shadow-2xl border border-white/10">
-              <img 
-                src={SprintImg} 
-                alt="Productivity sprint showing flowline and buffer logic" 
-                className="w-full h-auto object-cover"
-                loading="lazy"
-              />
-            </div>
+          <div className="mb-16 text-center md:text-left">
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+              Our Approach: The 4Ps
+            </h2>
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto md:mx-0">
+              Productivity transformation that delivers early proof — and sustains the gain. We integrate Theory of Constraints (TOC) and Lean Transformation into a governed, auditable operating model.
+            </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 text-left">
