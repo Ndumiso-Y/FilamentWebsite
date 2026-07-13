@@ -13,12 +13,19 @@ import rudyImg from '../assets/images/optimized/dr-rudy-phillis.webp';
 
 const imageMap = {
   'monique.png': moniqueImg,
+  '/assets/images/optimized/monique-phillis-executive.webp': moniqueImg,
   'vincent.png': vincentImg,
+  '/assets/images/optimized/vincent-seboni.webp': vincentImg,
   'mxolisi-kobus.jpg': mxolisiImg,
+  '/assets/images/optimized/mxolisi-kobus.webp': mxolisiImg,
   'sadha-govender.jpg': sadhaImg,
+  '/assets/images/optimized/sadha-govender.webp': sadhaImg,
   'marc-corcoran.jpg': marcImg,
+  '/assets/images/optimized/marc-corcoran.webp': marcImg,
   'lefu.png': lefuImg,
-  'dr-rudy.jpg': rudyImg
+  '/assets/images/optimized/lefu-mohloki.webp': lefuImg,
+  'dr-rudy.jpg': rudyImg,
+  '/assets/images/optimized/dr-rudy-phillis.webp': rudyImg
 };
 
 export default function PeoplePage() {
