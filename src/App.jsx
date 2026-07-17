@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 import MainLayout from './layouts/MainLayout';
@@ -9,15 +9,12 @@ import OurApproachPage from './pages/OurApproachPage';
 import PeoplePage from './pages/PeoplePage';
 import InsightsPage from './pages/InsightsPage';
 import ContactPage from './pages/ContactPage';
+import DigitalBusinessCard from './components/DigitalBusinessCard';
 
-// Placeholders for routes to be built
-const Placeholder = ({ title }) => (
-  <div className="pt-24 pb-16 min-h-screen">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 className="text-4xl font-bold">{title}</h1>
-    </div>
-  </div>
-);
+const DigitalCardRoute = () => {
+  const { slug } = useParams();
+  return <DigitalBusinessCard slug={slug} />;
+};
 
 export default function App() {
   return (
@@ -34,8 +31,7 @@ export default function App() {
             <Route path="/contact" element={<ContactPage />} />
           </Route>
           
-          {/* Keep digital business cards route standalone if needed, or route under main layout */}
-          {/* We'll handle this in a dedicated refactor if requested */}
+          <Route path="/cards/:slug" element={<DigitalCardRoute />} />
         </Routes>
       </BrowserRouter>
     </HelmetProvider>

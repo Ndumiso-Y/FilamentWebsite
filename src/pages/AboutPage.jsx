@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Building2, Users, Shield, Target, Building } from 'lucide-react';
+import { Building2, Users, Shield, Target } from 'lucide-react';
 import { seoData } from '../data/seoData';
 
 import AboutHeroImg from '../assets/images/optimized/filament-underground-productivity-context.webp';
